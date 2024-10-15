@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chanyoung Kim</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+
+        nav {
+            display: flex;
+            justify-content: center;
+            background-color: #333;
+        }
+
+        nav a {
+            color: white;
+            padding: 14px 20px;
+            text-decoration: none;
+            text-align: center;
+        }
+
+        nav a:hover {
+            background-color: #575757;
+        }
+
+        header {
+            text-align: center;
+            padding: 20px;
+            background-color: #f4f4f4;
+        }
+
+        header img {
+            width: 100%;
+            max-width: 200px;
+            border-radius: 50%;
+        }
+
+        section {
+            display: none; /* 기본적으로 섹션 숨기기 */
+            padding: 20px;
+            margin: 20px auto;
+            max-width: 1000px;
+        }
+
+        footer {
+            text-align: center;
+            padding: 10px;
+            background-color: #333;
+            color: white;
+            position: fixed;
+            width: 100%;
+            bottom: 0;
+        }
+
+        @media (max-width: 600px) {
+            nav a {
+                padding: 10px;
+            }
+        }
+
+        /* 첫 번째 섹션은 기본적으로 보이게 설정 */
+        #home {
+            display: block;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Navigation Menu -->
+    <nav>
+        <a href="#" onclick="showSection('home')">Home</a>
+        <a href="#" onclick="showSection('education')">Education</a>
+        <a href="#" onclick="showSection('research')">Research</a>
+        <a href="#" onclick="showSection('publication')">Publication</a>
+        <a href="#" onclick="showSection('activities')">Activities</a>
+        <a href="#" onclick="showSection('miscellaneous')">Miscellaneous</a>
+    </nav>
+
+    <!-- Home Section -->
+    <section id="home">
+        <header>
+            <h1>Chanyoung Kim</h1>
+            <img src="idphoto_chanyoung.jpg" alt="Chanyoung Kim's Photo" style="width:100%; max-width:200px;">
+        </header>        
+        <p>Welcome to the official website of Chanyoung Kim.</p>
+        <h2>Research Interests</h2>
+        <p>
+            Artificial Intelligence (AI), Applied Mathematics, Quantum Computing
+        </p>
+        <h2>Contact Information</h2>
+        <p>Email: chan00young@kaist.ac.kr</p>
+    </section>
+
+    <!-- Education Section -->
+    <section id="education">
+        <h2>Education</h2>
+        <h3>2024.02 ~</h3>
+        <p>Master's degree, KAIST</p>
+        <h3>2020.02 ~ 2024.02</h3>
+        <p>B.S. in Mathematics, Early Graduation, Sungkyunkwan University</p>
+        <h2>Grants and Funding </h2>
+        <h3>2024.09 ~ 2025.08</h3>
+        <p>
+            Research Support Grant for Master's Students - 
+            2024 Next Generation Researchers Support Program in Science and Engineering
+            funded by the National Research Foundation of Korea (NRF)
+        </p>
+    </section>
+
+    <!-- Research Interests Section -->
+    <section id="research">
+        <h2>Research Interests</h2>
+
+        <h3>Artificial Intelligence (2023 ~ )</h3>
+        <p>
+            Machine Learning (ML), 
+            Generative Model (Diffusion Model, VAE)
+        </p>
+        <img 
+        src="generatinggraph.png" alt="Generating Graph" 
+        style="width:100%; max-width:900px; display:block; margin:auto;"
+        >
+
+        <h3>Applied Mathematics (2024 ~ )</h3>
+        <p> Partial Differential Equations (PDE), 
+            Numerical Analysis, 
+            Spectral Methods
+        </p>
+
+        <h3>Quantum Computing (2024 ~ )</h3>
+        <p>
+            Quantum Machine Learning (QML)
+        </p>
+        
+    </section>
+
+            
+    <!-- Publication Section -->
+    <section id="publication">
+        <h2>Publication</h2>
+        
+        <h3>2024</h3>
+        <p>
+            <i>Kim, N., Lee, D., Kim, C. et al. Simple arithmetic operation in latent space can generate a novel three-dimensional graph metamaterials.</i> 
+            <i>npj Comput Mater 10, 236 (2024).</i>
+            <a href="https://doi.org/10.1038/s41524-024-01430-3" target="_blank">https://doi.org/10.1038/s41524-024-01430-3</a>
+        </p>
+    </section>
+
+    <!-- Activities Section -->
+    <section id="activities">
+        <h1>Activities</h1>
+        <h3>Teaching Assistent (TA)</h3>
+        <p>(2024~) Network Manager in the Mathematical Sciences Department</p>
+        <p>(2024 Fall) TA MAS110 - Linear Algebra for Data Science</p>
+        <p>(2024 Spring) TA MAS250 - Probability and Statistics</p>
+        <h3>Presentation</h3>
+    </section>
+
+    <!-- Miscellaneous Section -->
+    <section id="miscellaneous">
+        <h2>Miscellaneous</h2>
+        <h3>Skills</h3>
+        <p>
+            Linux, Python (PyTorch), MATLAB
+        </p>
+        <h3>Hobbies</h3>
+        <p>Workout, Swimming, Music, Guitar</p>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; Chanyoung Kim. All rights reserved.</p>
+    </footer>
+
+    <script>
+        // JavaScript function to show the selected section
+        function showSection(sectionId) {
+            // Hide all sections
+            const sections = document.querySelectorAll('section');
+            sections.forEach(section => {
+                section.style.display = 'none';
+            });
+            // Show the selected section
+            document.getElementById(sectionId).style.display = 'block';
+        }
+    </script>
+
+</body>
+</html>
